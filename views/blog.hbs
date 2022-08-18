@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>Creating Blog Page</title>
+    <link rel="stylesheet" href="assets/css/blog.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="left-side">
+            <a href="/">
+                <img src="/assets/img/logo.png" alt="logo" />
+            </a>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/blog" class="list-active">Add Project</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right-side">
+            <a href="/contact"> Contact Me </a>
+        </div>
+    </nav>
+
+    <div>
+        <div class="blog">
+
+
+
+            {{#if isLogin}}
+            <div style="text-align: right; margin-right: 150px; margin-top:50px">
+                <a href="/add-blog"
+                    style="background-color: black; padding: 8px 20px; color:white; border-radius: 5px; text-decoration: none">Add
+                    Blog</a>
+            </div>
+            {{/if}}
+            <div id="contents" class="blog-list">
+                <!-- dynamic content would be here -->
+                <div class="addproject">
+                    <div class="imgproject">
+                        <div>
+                            <img class="blog-image" src="/assets/img/blog-img.png" alt="gambar1">
+                        </div>
+
+                    </div>
+                    <div class="judul">
+                        <h1>
+                            <a href="/blog-detail/1" target="_blank">Pasar Coding di Indonesia
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="durasi">
+                        durasi : 3 bulan
+                    </div>
+                    <div class="detail">
+                        <p>
+                            starup 2022 sedang berkembang pesat pada saat ini
+                            apalagi semenjak pandemi covid 19
+                        </p>
+                    </div>
+                    <div class="icon">
+                        <div><i class="fa-brands fa-android"></i></div>
+                        <div><i class="fa-brands fa-square-js"></i></div>
+                        <div><i class="fa-brands fa-react"></i></div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn-edit">Edit Post</button>
+                        <button class="btn-post">Post Blog</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="blog.js"></script>
+
+</body>
+
+</html>
